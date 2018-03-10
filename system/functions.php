@@ -15,3 +15,8 @@
     {
         require_once 'controllers/' . $controller . '.php';
     }
+
+    function _fRunModel($model)
+    {
+        require_once 'models/' . $model . '.php';
+    }
