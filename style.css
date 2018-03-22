@@ -1,0 +1,139 @@
+body{
+	margin:0;
+	padding:0;
+	background-image: url("img/black.png");
+	font-family: 'Open Sans', sans-serif;
+}
+header img{
+	width:100px;
+	height:100px;
+	text-align:center;
+	line-height:100px;
+	vertical-align:bottom;
+}
+
+#logo{
+	font-size:65px;
+	font-weight: 700;
+	color:white;
+	text-align:center;
+	margin-bottom:30px;
+	margin-top:30px;
+	text-transform: uppercase;
+	letter-spacing:5px;
+	color: #cccccc;
+}
+#topnav{
+	float:left;
+	width:100%;
+	background-color:#293756;
+	text-align: center;
+}
+.menu{
+	list-style-type: none;
+	margin: 0;
+	padding: 10px;
+	font-size: 18px;
+	min-height: 38px;
+	line-height: 200%;
+}
+
+.menu > li{
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-right: 1px dashed #0a2b42;
+}
+
+.menu > li:first-child{
+	border-left: 1px dashed #0a2b42;
+}
+
+.menu a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.menu a:hover{
+	color: #0a2b42;
+}
+
+#container{
+	margin-left: 15%;
+	float:left;
+	width:70%;
+	text-align: justify;
+	text-align:	center;
+	background-color: #98a0b3;
+}
+
+#container img{
+	align:center;
+	height:600px;
+	width:600px;
+}
+#container  h1{
+	font-size: 32px;
+	font-weight: 400;
+	color:	#33334d;
+	text-align:center;
+	text-transform: uppercase;
+}
+#container  p{
+	margin:5px;
+	text-indent:2px;
+}
+footer{
+	width:100%;
+	line-height:30px;
+	height:30px;
+	background-color:#293756;
+	clear:both;
+	text-align:center;
+	color:white;
+	bottom:0;
+}
+
+/* FORMULARZ LOGOWANIA */
+
+#logowanie{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:150px;
+	margin-bottom:50px;
+	clear:both;
+	background-color:#808080;
+	width:300px;
+	padding:50px;
+	box-shadow: 10px 10px 27px 11px rgba(0,0,0,0.21);
+}
+input[type=text],
+input[type=password]
+{
+	width: 300px;
+	background-color: #efefef;
+	color: #666666;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	font-size: 20px;
+	padding: 10px;
+	box-sizing: border-box;
+	outline: none;
+	margin-top: 10px;
+}
+
+input[type=submit],
+input[type=reset]
+{
+	width: 300px;
+	background-color:  #264d73;
+	font-size:20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	letter-spacing: 2px;
+	outline: none;
+}
