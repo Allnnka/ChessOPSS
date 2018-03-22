@@ -2,38 +2,21 @@
 <html lang="pl">
 
 <head>
-
 	<meta charset="utf-8" />
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
-	<link rel="stylesheet" href="style.css" />
-
+	<link rel="stylesheet" href="styles/style.css" />
 	<title>Strona główna</title>
 </head>
 
 <body>
 	<header>
-		<h1 id="logo">
-			<img src="img/horse.png" /> SZACHY ONLINE
-			<img src="img/horse.png" />
-		</h1>
+		<?php
+				include 'modules/header.php';
+		?>
 		<nav id="topnav">
-			<ul class="menu">
-				<li>
-					<a href="index.php">Strona główna</a>
-				</li>
-				<li>
-					<a href="ranking.php">Ranking</a>
-				</li>
-				<li>
-					<a href="game.php">Rozgrywka</a>
-				</li>
-				<li>
-					<a href="login.php">Logowanie</a>
-				</li>
-				<li>
-					<a href="register.php">Rejestracja</a>
-				</li>
-			</ul>
+			<?php
+				include 'modules/menu.php';
+			?>
 		</nav>
 	</header>
 	<main>
@@ -67,9 +50,8 @@
 			</article>
 		</div>
 	</main>
-	<footer>
-		Wszelkie prawa zastrzeżone &copy;
-	</footer>
+	<?php
+		include 'modules/footer.php';
+	?>
 </body>
-
 </html>
