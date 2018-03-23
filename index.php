@@ -6,7 +6,6 @@
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
 	<link rel="stylesheet" href="styles/style.css" />
 	<title>Strona główna</title>
-	<title>Nowa strona glowna</title>
 </head>
 
 <body>
