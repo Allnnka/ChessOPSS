@@ -27,14 +27,13 @@
 				</header>
 
 				<?php
-					/*include 'db/queries.php';
-					test
-					$result = testGet();
+					include 'db/queries.php';
+					
+					addNewUser("test", "test2");
 
-					while ($row = $result->fetch_assoc()) {
-						echo $row['email']."<br>";
-					}
-					*/
+					//$result = checkUserExist("arkes987@gmail.com", "test");
+
+					//echo $result;
 				?>
 
 					<hr/>
