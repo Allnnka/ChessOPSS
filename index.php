@@ -26,6 +26,17 @@
 					<h1> Zasady gry w szachy na 4 osoby </h1>
 				</header>
 
+				<?php
+					/*include 'db/queries.php';
+
+					$result = testGet();
+
+					while ($row = $result->fetch_assoc()) {
+						echo $row['email']."<br>";
+					}
+					*/
+				?>
+
 				<hr/>
 
 				<img src="img/chess.png" />
