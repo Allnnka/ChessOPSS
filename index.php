@@ -28,7 +28,7 @@
 
 				<?php
 					/*include 'db/queries.php';
-
+					test
 					$result = testGet();
 
 					while ($row = $result->fetch_assoc()) {
