@@ -18,7 +18,7 @@ function checkUserExist($email, $password)
 
 function addNewUser($email, $password)
 {
-    $query = "";
+    $query = "INSERT INTO Users";
     $result = executeQuery($query);
     return $result;
 }
