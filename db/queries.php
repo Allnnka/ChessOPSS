@@ -2,30 +2,52 @@
 
 include 'db/connector.php';
 
-function getAllUsers()
+function getAllUsers() // done
 {
     $query = "SELECT * FROM Users";
     $resul = executeQuery($query);
     return $result;
 }
 
-function checkUserExist($email, $password)
+function getUserIdByEmail($email) // done
 {
-    $query = "SELECT COUNT() FROM Users WHERE email = $email AND password = $password";
+    $query = "SELECT * FROM Users WHERE email ='" . $email . "'";
     $result = executeQuery($query);
-    return $result;
+    $data = $result->fetch_assoc();
+    
+    if($data != null)
+        return $data['id'];
+    
+    return -1;
+}
+
+function checkUserExist($email, $password) // done
+{
+    $query = "SELECT * FROM Users WHERE email ='" . $email . "'" . "AND password ='" . $password . "'";
+    $result = executeQuery($query);
+    $data = $result->fetch_assoc();
+
+    if($data != null)
+        return true;
+    return false;
 }
 
 function addNewUser($email, $password)
 {
-    $query = "INSERT INTO Users";
-    $result = executeQuery($query);
-    return $result;
+    if(!checkUserExist($email, $password))
+    {
+        $query = "INSERT INTO Users ('email', 'password') VALUES('" . $email . "','" . $password . "')";
+        $result = executeQuery($query);
+        //$data = $result->fetch_assoc();
+        //return $data;
+    }
 }
 
-function deleteUser($email)
+function deleteUser($id)
 {
-    $query = "";
+    $query = "DELETE FROM Users WHERE id='" . $id . "'";
     $result = executeQuery($query);
-    return $result;
+    $data = $result->fetch_assoc();
+
+    return $data;
 }
