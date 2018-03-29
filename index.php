@@ -23,17 +23,12 @@
 		<div id="container">
 			<article>
 				<header>
-					<h1> Zasady gry w szachy na 4 osoby </h1>
+					<h1> Zasay gry w szachy na 4 osoby </h1>
 				</header>
 
 				<?php
-					include 'db/queries.php';
-					
-					addNewUser("test", "test2");
+					require_once 'db/queries.php';
 
-					//$result = checkUserExist("arkes987@gmail.com", "test");
-
-					//echo $result;
 				?>
 
 					<hr/>

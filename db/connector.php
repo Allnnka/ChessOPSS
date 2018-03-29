@@ -2,12 +2,10 @@
 
 function getDatabaseConnection()
 {
-    require_once 'db/config.php';
-
-    $connection = mysqli_connect($serverName, $userName, $password)
+    $connection = mysqli_connect("localhost", "root", "")
     or die('Error while connecting to server');
-
-    $db = mysqli_select_db($connection, $databaseName)
+    
+    $db = mysqli_select_db($connection, "opss")
     or die('Error while selecting database');
 
     mysqli_set_charset($connection, 'utf8');
