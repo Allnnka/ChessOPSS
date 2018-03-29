@@ -6,7 +6,8 @@
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
 	<link rel="stylesheet" href="styles/style.css" />
 	<script src="scripts/jquery-3.3.1.min.js"></script>
-	<script src="scripts/validate.js"></script>
+	<script src="scripts/validate.js"></script> 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<title>Rejestracja</title>
 </head>
 
@@ -22,16 +23,21 @@
 		</nav>
 	</header>
 	<main>
-		<div id="logowanie">
-			<article>
-				<form>
-					<input type="email" id="form_username" placeholder="E-mail" onfocus="this.placeholder=''" onblur="this.placeholder='E-mail'" /><span class="error_form" id="email_error_message">Test</span>
-					<input type="password"  id="form_password" placeholder="Hasło" onfocus="this.placeholder=''" onblur="this.placeholder='Hasło'" />
-					<input type="password" id="form_retype_password_" placeholder="Powtórz hasło" onfocus="this.placeholder=''" onblur="this.placeholder='Powtórz hasło'"/>
-					<input type="submit"  id="form_submit" value="Zarejestruj się" />
-				</form>
-			</article>
-		</div>
+		<form id="logowanie" method="post" action="">
+				<div>
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email"></input>
+					<span class="komunikat"></span>
+				</div>
+				<div>
+					<label for="haslo">Haslo:</label>
+					<input type="password" id="haslo" name="haslo"></input>
+					<span class="komunikat"></span>
+				</div>
+				<div id="submit">
+					<button type="submit">Wyslij</button>
+				</div>
+		</form>
 	</main>
 	<?php
 		include 'modules/footer.php';

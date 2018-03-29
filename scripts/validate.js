@@ -1,32 +1,29 @@
-$(function()
+$(document).ready(function() {
 
-{
-    $("#email_error_message").hide();
-    $("#password_error_message").hide();
-    $("#retype_password_error_message").hide();
-    
-    var error_email = false;
-    var error_password = false;
-    var error_retype_password = false;
-
-$("#form_username").focusout(function()
-{
-    check_email();
-});
-$("#form_password").focusout(function()
-{
-    check_password();
-});
-
-$("#form_retype_password").focusout(function()
-{
-    check_retype_password();
-});
-
-    function check_email()
-    {
-        var check_email = $()
-
+$('#email').on('blur', function() {
+    var input = $(this);
+    var pattern = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    var is_email = pattern.test(input.val());
+    if(is_email){
+        input.removeClass("invalid").addClass("valid");
+        input.next('.komunikat').text("Wprowadzono poprawny email.").removeClass("blad").addClass("ok");
     }
+    else{
+        input.removeClass("valid").addClass("invalid");
+        input.next('.komunikat').text("Wprowadź poprawny email!").removeClass("ok").addClass("blad");
+    }
+});
 
+$('#submit button').click(function(event){
+        var name = $('#name');
+        var email = $('#email');
+        var message = $('#message');
+        
+        if(name.hasClass('valid') && email.hasClass('valid') && message.hasClass('valid')){
+            alert("Pomyślnie wysłano formularz.");	
+        }
+        else {
+            event.preventDefault();
+            alert("Uzupełnij wszystkie pola!");	
+});
 });
