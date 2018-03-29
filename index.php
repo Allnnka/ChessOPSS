@@ -28,6 +28,7 @@
 
 				<?php
 					require_once 'db/queries.php';
+
 				?>
 
 					<hr/>

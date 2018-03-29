@@ -38,6 +38,10 @@ header img{
 	line-height: 200%;
 }
 
+.rank{
+	text-align: center;
+}
+
 .menu > li{
 	display: inline-block;
 	padding-left: 20px;
