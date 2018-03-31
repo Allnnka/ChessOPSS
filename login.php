@@ -24,9 +24,8 @@
 		<div id="logowanie">
 			<article>
 				<form>
-					<input type="text" placeholder="login" onfocus="this.placeholder=''" onblur="this.placeholder='login'" />
+					<input type="email" name="email" placeholder="email" minlength="5" required onfocus="this.placeholder=''" onblur="this.placeholder='login'" />	
 					<input type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'" />
-					<input type="password" placeholder="Powtórz hasło" onfocus="this.placeholder=''" onblur="this.placeholder='Powtórz hasło'" />
 					<input type="submit" value="Zaloguj się" />
 				</form>
 			</article>

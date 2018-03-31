@@ -23,22 +23,16 @@
 		</nav>
 	</header>
 	<main>
-		<form id="logowanie" method="post" action="">
-				<div>
-					<label for="email">Email:</label>
-					<input type="email" id="email" name="email"></input>
-					<span class="komunikat"></span>
-				</div>
-				<div>
-					<label for="haslo">Haslo:</label>
-					<input type="password" id="haslo" name="haslo"></input>
-					<span class="komunikat"></span>
-				</div>
-				<div id="submit">
-					<button type="submit">Wyslij</button>
-				</div>
-		</form>
-	</main>
+		<div id="logowanie">
+		<article>
+				<form method="post" id="rejestracja" action="register.php">
+					<input type="email" name="email" placeholder="email" onfocus="this.placeholder=''" onblur="this.placeholder='login'" />
+					<input type="password" id="password" name="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'" />
+					<input type="password" name="confirmPassword" placeholder="Powtórz hasło" onfocus="this.placeholder=''" onblur="this.placeholder='Powtórz hasło'" />
+					<input type="submit" value="Zaloguj się" />
+				</form>
+		</article>
+		</div>
 	<?php
 		include 'modules/footer.php';
 	?>
