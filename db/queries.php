@@ -1,6 +1,6 @@
 <?php
 
-require_once 'db/connector.php';
+include_once 'db/connector.php';
 
 function getAllUsers() // done
 {
