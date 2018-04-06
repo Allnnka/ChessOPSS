@@ -6,10 +6,6 @@
 	<link rel="stylesheet" href="styles/style.css" />
 	<script src="scripts/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="scripts/validator.js"></script>
-<<<<<<< HEAD
-	<script type="text/javascript" src="scripts/validatorRules.js"></script>
-=======
->>>>>>> fde13db316016ec99ee64a4042a6bb7748063751
 	<title>Rejestracja</title>
 </head>
 
@@ -26,14 +22,14 @@
 	</header>
 	<main>
 		<div class="register">
-			<form method="post" action="models/registerUser.php">
+			<form method="post" action="models/registerUser.php" accept-charset='UTF-8'>
 				<span class="popuptext" id="emailValidationPopup">Błędny adres email</span>
-				<input type="text" id="emailInput" placeholder="Adres email"/>
+				<input type="text" name="emailInput" id="emailInput" placeholder="Adres email"/>
 				<span class="popuptext" id="passwordValidationPopup">Błędne hasło</span>
-				<input type="password" id="passwordInput" placeholder="Hasło"/>
-				<span class="popuptext" id="repet">Hasła nie są zgodne</span>
-				<input type="password" id="repeatPasswordInput" placeholder="Powtórz hasło"/>
-				<input type="submit" value="Zarejestruj się" />
+				<input type="password" name="passwordInput" id="passwordInput" placeholder="Hasło"/>
+				<span class="popuptext" id="passwordInputRepeat">Hasła nie są zgodne</span>
+				<input type="password" name="repeatPasswordInput" id="repeatPasswordInput" placeholder="Powtórz hasło"/>
+				<input id="submitRegister" type="submit" value="Zarejestruj się" disabled/>
 			</form>
 		</div>
 		<?php

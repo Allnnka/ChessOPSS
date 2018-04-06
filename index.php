@@ -14,7 +14,8 @@
 				include 'modules/header.php';
 		?>
 			<nav id="topnav">
-				<?php
+				
+			<?php
 				include 'modules/menu.php';
 			?>
 			</nav>
@@ -28,6 +29,8 @@
 
 				<?php
 					require_once 'db/queries.php';
+
+					//echo getUserIdByEmail("arkes987@gmail.com");
 
 				?>
 
