@@ -27,3 +27,4 @@ $(document).ready(function() {
                 $(popup).removeClass("show");
         }
     });
+});
