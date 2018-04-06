@@ -6,7 +6,10 @@
 	<link rel="stylesheet" href="styles/style.css" />
 	<script src="scripts/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="scripts/validator.js"></script>
+<<<<<<< HEAD
 	<script type="text/javascript" src="scripts/validatorRules.js"></script>
+=======
+>>>>>>> fde13db316016ec99ee64a4042a6bb7748063751
 	<title>Rejestracja</title>
 </head>
 

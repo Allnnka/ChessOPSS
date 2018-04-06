@@ -7,3 +7,4 @@ function validatePassword(password) {
     var expression = /^\w{6,30}$/;
     return expression.test(String(password).toLowerCase());
 }
+
