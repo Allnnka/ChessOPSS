@@ -29,7 +29,6 @@
 
 				<?php
 					require_once 'db/queries.php';
-
 					//echo getUserIdByEmail("arkes987@gmail.com");
 
 				?>

@@ -7,15 +7,13 @@
 	<link rel="stylesheet" href="styles/style.css" />
 	<title>Ranking</title>
 	<script src="scripts/jquery-3.3.1.min.js"></script>
-	<script src="scripts/validate.js"></script>
-	<script src="scripts/angular.min.js"></script>
 </head>
 
-<body ng-app="app">
+<body>
 	<header>
-		<?php
+			<?php
 				include 'modules/header.php';
-		?>
+			?>
 		<nav id="topnav">
 			<?php
 				include 'modules/menu.php';
@@ -23,40 +21,26 @@
 		</nav>
 	</header>
 	<main>
-			<div class="rank">
-				<h2>Ranking graczy</h2>
-				<table ng-controller="controller" border="1">
-					<tr ng-repeat="x in records">
-						<td>{{x.Name}}</td>
-						<td>{{x.Country}}</td>  
-					</tr>
-				</table>
-
-			</div
+		<div id="container">
+			<article>
+					<header>
+						<h1>Ranking graczy</h1>
+					</header>
+					<hr/>
+					<?php
+						require_once 'db/queries.php';
+						$data = getUserRankTable();
+						echo "<div class='scoreTable'><table><tr><th>ID</th><th>Email</th><th>Score</th><th>Win Games</th></tr>";
+						while($row = $data->fetch_assoc()) {
+							echo "<tr><td>".$row["id"]."</td><td>".$row["email"]."</td><td>".$row["score"]."</td><td>".$row["win_games"]."</td></tr>";
+						}
+						echo "</table></div>";
+					?>
+			</article>
+		<div>
 	</main>
 	<?php
 		include 'modules/footer.php';
 	?>
 </body>
 </html>
-
-<script>
-var app = angular.module("app", []);
-app.controller("controller", function($scope) {
-	$scope.records = [
-       {
-            "Name" : "Alfreds Futterkiste",
-            "Country" : "Germany"
-        },{
-            "Name" : "Berglunds snabbköp",
-            "Country" : "Sweden"
-        },{
-            "Name" : "Centro comercial Moctezuma",
-            "Country" : "Mexico"
-        },{
-            "Name" : "Ernst Handel",
-            "Country" : "Austria"
-        }
-    ]
-});
-</script>

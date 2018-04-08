@@ -22,14 +22,14 @@
 	</header>
 	<main>
 		<div class="register">
-			<form method="post" action="models/registerUser.php" accept-charset='UTF-8'>
+			<form method="post" id="registerForm" action="models/registerUser.php" accept-charset='UTF-8'>
 				<span class="popuptext" id="emailValidationPopup">Błędny adres email</span>
 				<input type="text" name="emailInput" id="emailInput" placeholder="Adres email"/>
 				<span class="popuptext" id="passwordValidationPopup">Błędne hasło</span>
 				<input type="password" name="passwordInput" id="passwordInput" placeholder="Hasło"/>
 				<span class="popuptext" id="passwordInputRepeat">Hasła nie są zgodne</span>
 				<input type="password" name="repeatPasswordInput" id="repeatPasswordInput" placeholder="Powtórz hasło"/>
-				<input id="submitRegister" type="submit" value="Zarejestruj się" disabled/>
+				<input id="submitRegister" type="submit" value="Zarejestruj się"/>
 			</form>
 		</div>
 		<?php

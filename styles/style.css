@@ -59,7 +59,7 @@ header img{
 }
 
 .menu a:hover{
-	color: #0a2b42;
+	color: #7689ff;
 }
 
 #container{
@@ -192,7 +192,6 @@ input.valid, textarea.valid
     visibility: visible;
     -webkit-animation: fadeIn 1s;
 	animation: fadeIn 1s;
-	
 }
 
 @-webkit-keyframes fadeIn {
@@ -203,4 +202,29 @@ input.valid, textarea.valid
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity:1 ;}
+}
+
+/*table, th, td {
+    border: 1px solid black;
+}*/
+
+th{
+	padding-left:15px;
+	text-align: left;
+}
+
+td{
+	text-align: center;
+	padding:3px;
+}
+
+.scoreTable{
+	border: 3px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 18px;
+    width: 50%;
+	padding: 5px;
+	margin-top: 15px;
+	margin-bottom:15px;
 }

@@ -58,7 +58,31 @@ function insertNewUser($email, $password) // done
             return true;
         return false;
      }
-     return false;
+     else
+     {
+        echo 'User already exist in database.';
+        return false;
+     }
+}
+
+function getUserRankTable()
+{
+    $query = "SELECT id, email, win_games, score FROM Users";
+    $result = executeQuery($query);
+    //$data = $result->fetch_assoc();
+
+    if($result != null)
+        return $result;
+}
+
+function getUserRankByEmail($email) // done
+{
+    $query = "SELECT email, win_games, score FROM Users WHERE email = '$email'";
+    $result = executeQuery($query);
+    $data = $result->fetch_assoc();
+
+    if($data != null)
+        return $data;
 }
 
 function deleteUser($id) // done

@@ -8,7 +8,7 @@ function validatePassword(password){
     return expression.test(String(password).toLowerCase());
 }
 
-function bindValidation(inputId, popupId, validationMethodName){
+function bindValidationToInput(inputId, popupId, validationMethodName){
     $(document).ready(function() {
         $(inputId).bind("input", function() {
             var popup = document.getElementById(popupId);
@@ -20,25 +20,37 @@ function bindValidation(inputId, popupId, validationMethodName){
                 if($(popup).hasClass("show"))
                     $(popup).removeClass("show");
             }
-
-            if($(popup).hasClass("show"))
-                canSubmitForm(false);
-            else
-                canSubmitForm(true);
-
         });
     });
 }
 
-function canSubmitForm(state){
-    $("#submitRegister").prop('disabled', !state);
+var validationInputs = ["#emailInput", "#passwordInput"];
+var validationPopups = ["emailValidationPopup", "passwordValidationPopup"];
+var validationMethods = [validateEmail, validatePassword];
+
+function isValidated(){
+    for(i = 0; i < validationInputs.length; i++){
+        if(!validationMethods[i]($(validationInputs[i]).val())){
+            var popup = document.getElementById(validationPopups[i]);
+            if(!$(popup).hasClass("show"))
+                popup.classList.toggle("show");
+            return false;
+        }
+    }
+    return true;
 }
 
+$(document).ready(function() {
+    $('#registerForm').on('submit', function(e) {
+        if(!isValidated()){
+            e.preventDefault();
+            console.log("not valid.");
+        }
+    });
+});
 
-bindValidation("#emailInput", "emailValidationPopup", validateEmail);
-bindValidation("#passwordInput", "passwordValidationPopup", validatePassword);
-
-
-var event = new Event('input');
-$("#emailInput").dispatchEvent(event);
-$("#passwordInput").dispatchEvent(event);
+$(document).ready(function() {
+    for(i = 0; i < validationInputs.length; i++){
+        bindValidationToInput(validationInputs[i], validationPopups[i], validationMethods[i]);
+    }
+});
