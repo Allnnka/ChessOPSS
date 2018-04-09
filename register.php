@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="styles/style.css" />
 	<script src="scripts/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="scripts/validator.js"></script>
-	<script src='https://www.google.com/recaptcha/api.js'></scr
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<title>Rejestracja</title>
 </head>
 
