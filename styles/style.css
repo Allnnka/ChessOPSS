@@ -84,7 +84,6 @@
 	}
 	
 	#container img{
-		align:center;
 		height:600px;
 		width:600px;
 	}
@@ -136,6 +135,7 @@
 		box-shadow: 10px 10px 27px 11px rgba(0,0,0,0.21);
 	}
 	input[type=text],
+	input[type=email],
 	input[type=password]
 	{
 		width: 300px;
