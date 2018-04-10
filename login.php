@@ -10,25 +10,27 @@
 </head>
 
 <body>
-	<header>
-		<?php
-				include 'modules/header.php';
-		?>
-		<nav id="topnav">
+ 	<div id="content">
+		<header>
 			<?php
-				include 'modules/menu.php';
+					include 'modules/header.php';
 			?>
-		</nav>
-	</header>
-	<main>
-		<div id="login">
-				<form>
-					<input type="email" name="email" placeholder="email" minlength="5" required onfocus="this.placeholder=''" onblur="this.placeholder='login'" />	
-					<input type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'" />
-					<input type="submit" value="Zaloguj się" />
-				</form>
-		</div>
-	</main>
+			<nav id="topnav">
+				<?php
+					include 'modules/menu.php';
+				?>
+			</nav>
+		</header>
+		<main>
+			<div id="login">
+					<form>
+						<input type="email" name="email" placeholder="email" minlength="5" required onfocus="this.placeholder=''" onblur="this.placeholder='login'" />	
+						<input type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'" />
+						<input type="submit" value="Zaloguj się" />
+					</form>
+			</div>
+		</main>
+	</div>
 	<?php
 		include 'modules/footer.php';
 	?>

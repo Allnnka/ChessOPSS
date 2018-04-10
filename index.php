@@ -9,54 +9,56 @@
 </head>
 
 <body>
-	<header>
-		<?php
-				include 'modules/header.php';
-		?>
-			<nav id="topnav">
-				
+	<div id="content">
+		<header>
 			<?php
-				include 'modules/menu.php';
+					include 'modules/header.php';
 			?>
-			</nav>
-	</header>
-	<main>
-		<div id="container">
-			<article>
-				<header>
-					<h1> Zasay gry w szachy na 4 osoby </h1>
-				</header>
-
+				<nav id="topnav">
+					
 				<?php
-					require_once 'db/queries.php';
-					//echo getUserIdByEmail("arkes987@gmail.com");
-
+					include 'modules/menu.php';
 				?>
+				</nav>
+		</header>
+		<main>
+			<div id="container">
+				<article>
+					<header>
+						<h1> Zasay gry w szachy na 4 osoby </h1>
+					</header>
 
-					<hr/>
+					<?php
+						require_once 'db/queries.php';
+						//echo getUserIdByEmail("arkes987@gmail.com");
 
-					<img src="img/chess.png" />
+					?>
 
-					<p>
-						Lorem ipsum dolor sit amet risus. Nunc tempor tristique, mauris nibh eu magna diam, suscipit in, odio. Class aptent taciti
-						sociosqu ad litora torquent per inceptos hymenaeos. Fusce vel bibendum risus. Vivamus est tincidunt at, ornare dolor
-						sit amet, euismod pulvinar, libero. Nulla lobortis semper. Praesent quis dui.
-					</p>
-					<p>
-						N ornare arcu vitae imperdiet consequat. Cum sociis natoque penatibus et ultrices posuere eget, facilisis nec, pede. Suspendisse
-						lectus orci, sodales quam purus, congue at, egestas non, leo. Mauris vehicula ut, urna. Nunc a mi. Sed in vestibulum
-						tristique tempus dignissim. Phasellus vestibulum. Cras porta, erat volutpat. Praesent scelerisque rhoncus et, tristique
-						mauris quis mauris. Nunc arcu sit amet lorem. Praesent euismod convallis non, quam.
-					</p>
-					<p>
-						Vestibulum ante in massa. Curabitur non dui. Aliquam faucibus eros. Nullam ligula quis wisi. Suspendisse lectus blandit iaculis,
-						diam id leo sodales pretium convallis. Praesent blandit tempus arcu. Donec nonummy at, ornare nisl, blandit risus commodo
-						tincidunt lorem. Morbi dignissim, sapien vitae velit a dolor lorem, ornare euismod. Sed dignissim. Pellentesque eget
-						ipsum dolor sapien auctor consectetuer. Curabitur vel massa. Nunc tristique purus. Aenean ac posuere cubilia.
-					</p>
-			</article>
-		</div>
-	</main>
+						<hr/>
+
+						<img src="img/chess.png" />
+
+						<p>
+							Lorem ipsum dolor sit amet risus. Nunc tempor tristique, mauris nibh eu magna diam, suscipit in, odio. Class aptent taciti
+							sociosqu ad litora torquent per inceptos hymenaeos. Fusce vel bibendum risus. Vivamus est tincidunt at, ornare dolor
+							sit amet, euismod pulvinar, libero. Nulla lobortis semper. Praesent quis dui.
+						</p>
+						<p>
+							N ornare arcu vitae imperdiet consequat. Cum sociis natoque penatibus et ultrices posuere eget, facilisis nec, pede. Suspendisse
+							lectus orci, sodales quam purus, congue at, egestas non, leo. Mauris vehicula ut, urna. Nunc a mi. Sed in vestibulum
+							tristique tempus dignissim. Phasellus vestibulum. Cras porta, erat volutpat. Praesent scelerisque rhoncus et, tristique
+							mauris quis mauris. Nunc arcu sit amet lorem. Praesent euismod convallis non, quam.
+						</p>
+						<p>
+							Vestibulum ante in massa. Curabitur non dui. Aliquam faucibus eros. Nullam ligula quis wisi. Suspendisse lectus blandit iaculis,
+							diam id leo sodales pretium convallis. Praesent blandit tempus arcu. Donec nonummy at, ornare nisl, blandit risus commodo
+							tincidunt lorem. Morbi dignissim, sapien vitae velit a dolor lorem, ornare euismod. Sed dignissim. Pellentesque eget
+							ipsum dolor sapien auctor consectetuer. Curabitur vel massa. Nunc tristique purus. Aenean ac posuere cubilia.
+						</p>
+				</article>
+			</div>
+		</main>
+	</div>
 	<?php
 		include 'modules/footer.php';
 	?>

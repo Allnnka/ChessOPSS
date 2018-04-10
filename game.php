@@ -10,13 +10,15 @@
 </head>
 
 <body>
-	<header>
-		<?php
-				include 'modules/header.php';
-		?>
-	</header>
-	<main>
-	</main>
+	<div id="content">
+		<header>
+			<?php
+					include 'modules/header.php';
+			?>
+		</header>
+		<main>
+		</main>
+	</div>
 	<?php
 			include 'modules/footer.php';
 	?>
