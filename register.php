@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+	<link rel="shortcut icon"  type="image/x-icon" href="img/favicon.ico"/>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
 	<link rel="stylesheet" href="styles/style.css" />
@@ -31,8 +32,7 @@
 					<input type="password" name="passwordInput" id="passwordInput" placeholder="Hasło"/>
 					<span class="popuptext" id="passwordInputRepeat">Hasła nie są zgodne</span>
 					<input type="password" name="repeatPasswordInput" id="repeatPasswordInput" placeholder="Powtórz hasło"/>
-					<br/> <br/>
-					<div class="g-recaptcha" data-sitekey="6Ldn1lEUAAAAANDFWX7IUuhIZdlTq_g75MmakEgW"></div>
+					<div class="g-recaptcha captcha" data-sitekey="6Ldn1lEUAAAAANDFWX7IUuhIZdlTq_g75MmakEgW"></div>
 					<input id="submitRegister" type="submit" value="Zarejestruj się"/>
 				</form>
 			</div>
