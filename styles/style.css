@@ -1,263 +1,286 @@
-*{
-	margin:0;
-	}
-	html,body{
-	height:100%;
-	}
-	#content
-	{
-		 flex: 1 0 auto;
-	}
-	body{
-		margin:0;
-		padding:0;
-		background-image: url("../img/black.png");
-		font-family: 'Open Sans', sans-serif;
-		display: flex;
-		flex-direction: column;
-	}
-	header img{
-		width:100px;
-		height:100px;
-		text-align:center;
-		line-height:100px;
-		vertical-align:bottom;
-	}
-	
-	#logo{
-		font-size:65px;
-		font-weight: 700;
-		color:white;
-		text-align:center;
-		margin-bottom:30px;
-		margin-top:30px;
-		text-transform: uppercase;
-		letter-spacing:5px;
-		color: #cccccc;
-	}
-	#topnav{
-		float:left;
-		width:100%;
-		background-color:#293756;
-		text-align: center;
-	}
-	.menu{
-		list-style-type: none;
-		margin: 0;
-		padding: 10px;
-		font-size: 18px;
-		min-height: 38px;
-		line-height: 200%;
-	}
-	
-	.rank{
-		text-align: center;
-	}
-	
-	.menu > li{
-		display: inline-block;
-		padding-left: 20px;
-		padding-right: 20px;
-		border-right: 1px dashed #0a2b42;
-	}
-	
-	.menu > li:first-child{
-		border-left: 1px dashed #0a2b42;
-	}
-	
-	.menu a{
-		color: #fff;
-		text-decoration: none;
-	}
-	
-	.menu a:hover{
-		color: #7689ff;
-	}
-	
-	#container{
-		margin-left: 15%;
-		float:left;
-		width:70%;
-		text-align: justify;
-		text-align:	center;
-		background-color: #98a0b3;
-	}
-	
-	#container  h1{
-		font-size: 32px;
-		font-weight: 400;
-		color:	#33334d;
-		text-align:center;
-		text-transform: uppercase;
-	}
-	#container  p{
-		margin:5px;
-		text-indent:2px;
-	}
-	footer{
-		width:100%;
-		line-height:30px;
-		height:30px;
-		background-color:#293756;
-		clear:both;
-		text-align:center;
-		color:white;
-		bottom:0;
-		flex: 0 0 auto;
-	}
-	
-	/* FORMULARZ LOGOWANIA */
-	
-	#login{
-		margin-left:auto;
-		margin-right:auto;
-		margin-top:150px;
-		margin-bottom:50px;
-		clear:both;
-		background-color:#808080;
-		width:300px;
-		padding:50px;
-		box-shadow: 10px 10px 27px 11px rgba(0,0,0,0.21);
-	}
-	.register{
-		margin-left:auto;
-		margin-right:auto;
-		margin-top:150px;
-		margin-bottom:50px;
-		clear:both;
-		background-color:#808080;
-		width:300px;
-		padding:50px;
-		box-shadow: 10px 10px 27px 11px rgba(0,0,0,0.21);
-	}
-	input[type=text],
-	input[type=email],
-	input[type=password]
-	{
-		width: 300px;
-		background-color: #efefef;
-		color: #666666;
-		border: 2px solid #ddd;
-		border-radius: 5px;
-		font-size: 20px;
-		padding: 10px;
-		box-sizing: border-box;
-		outline: none;
-		margin-top: 8px;
-	}
-	
-	input[type=submit],
-	input[type=reset]
-	{
-		width: 300px;
-		background-color:  #264d73;
-		font-size:20px;
-		color: white;
-		padding: 15px 10px;
-		margin-top: 20px;
-		border: none;
-		border-radius: 5px;
-		cursor: pointer;
-		letter-spacing: 2px;
-		outline: none;
-	}
-	
-	input.invalid, textarea.invalid
-	{
-		border: 3px solid red;
-	}
-	 
-	input.valid, textarea.valid
-	{
-		border: 3px solid green;
-	}
-	
-	.popuptext {
-		visibility: hidden;
-		width: 160px;
-		background-color: #293756;
-		color: #fff;
-		text-align: center;
-		border-radius: 5px;
-		padding: 8px;
-		margin-top: -27px;
-		position: absolute;
-		opacity: 0.79;
-		margin-left: 290px;
-	}
-	
-	.popuptext::after {
-		content: "";
-		position: absolute;
-		top: 100%;
-		left: 5px;
-		margin-left: -5px;
-		border-width: 5px;
-		border-style: solid;
-		border-color: #555 transparent transparent transparent;
-	}
-	
-	.show {
-		visibility: visible;
-		-webkit-animation: fadeIn 1s;
-		animation: fadeIn 1s;
-	}
-	
-	@-webkit-keyframes fadeIn {
-		from {opacity: 0;} 
-		to {opacity: 1;}
-	}
-	
-	@keyframes fadeIn {
-		from {opacity: 0;}
-		to {opacity:1 ;}
-	}
-	
-	/*table, th, td {
-		border: 1px solid black;
-	}*/
-	
-	th{
-		padding-left:15px;
-		text-align: left;
-	}
-	
-	td{
-		text-align: center;
-		padding:3px;
-	}
-	
-	.scoreTable{
-		border: 3px solid black;
-		margin-left: auto;
-		margin-right: auto;
-		font-size: 18px;
-		width: 50%;
-		padding: 5px;
-		margin-top: 15px;
-		margin-bottom:15px;
-	}
+* {
+	margin: 0;
+}
 
-	.captcha{
-		margin-top:8px;
-	}
+html,
+body {
+	height: 100%;
+}
 
-	.chessImage{
-		margin:15px;
-		width:500px;
-		height:500px;
-	}
+#content {
+	flex: 1 0 auto;
+}
 
-	.headerText{
-		margin:5px;
-	}
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url("../img/black.png");
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	flex-direction: column;
+}
 
-	.rulesList{
-		margin:15px;
-		font-family: 'Roboto Slab', serif;
-		font-size: 16px;
-	}
+header img {
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	vertical-align: bottom;
+}
 
-	.rulesList>li{
-		margin-top:15px;
+#logo {
+	font-size: 65px;
+	font-weight: 700;
+	color: white;
+	text-align: center;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	color: #cccccc;
+}
+
+#topnav {
+	float: left;
+	width: 100%;
+	background-color: #293756;
+	text-align: center;
+}
+
+.menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 10px;
+	font-size: 18px;
+	min-height: 38px;
+	line-height: 200%;
+}
+
+.rank {
+	text-align: center;
+}
+
+.menu>li {
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-right: 1px dashed #0a2b42;
+}
+
+.menu>li:first-child {
+	border-left: 1px dashed #0a2b42;
+}
+
+.menu a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.menu a:hover {
+	color: #7689ff;
+}
+
+#container {
+	margin-left: 15%;
+	float: left;
+	width: 70%;
+	text-align: justify;
+	text-align: center;
+	background-color: #98a0b3;
+}
+
+#container h1 {
+	font-size: 32px;
+	font-weight: 400;
+	color: #33334d;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#container p {
+	margin: 5px;
+	text-indent: 2px;
+}
+
+footer {
+	width: 100%;
+	line-height: 30px;
+	height: 30px;
+	background-color: #293756;
+	clear: both;
+	text-align: center;
+	color: white;
+	bottom: 0;
+	flex: 0 0 auto;
+}
+
+/* FORMULARZ LOGOWANIA */
+
+#login {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 150px;
+	margin-bottom: 50px;
+	clear: both;
+	background-color: #808080;
+	width: 300px;
+	padding: 50px;
+	box-shadow: 10px 10px 27px 11px rgba(0, 0, 0, 0.21);
+}
+
+.register {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 150px;
+	margin-bottom: 50px;
+	clear: both;
+	background-color: #808080;
+	width: 300px;
+	padding: 50px;
+	box-shadow: 10px 10px 27px 11px rgba(0, 0, 0, 0.21);
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+	width: 300px;
+	background-color: #efefef;
+	color: #666666;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	font-size: 20px;
+	padding: 10px;
+	box-sizing: border-box;
+	outline: none;
+	margin-top: 8px;
+}
+
+input[type=submit],
+input[type=reset] {
+	width: 300px;
+	background-color: #264d73;
+	font-size: 20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	letter-spacing: 2px;
+	outline: none;
+}
+
+input.invalid,
+textarea.invalid {
+	border: 3px solid red;
+}
+
+input.valid,
+textarea.valid {
+	border: 3px solid green;
+}
+
+.popuptext {
+	visibility: hidden;
+	width: 160px;
+	background-color: #293756;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	padding: 8px;
+	margin-top: -27px;
+	position: absolute;
+	opacity: 0.79;
+	margin-left: 290px;
+}
+
+.popuptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 5px;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+
+.show {
+	visibility: visible;
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
 	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+th {
+	padding-left: 15px;
+	text-align: left;
+}
+
+td {
+	text-align: center;
+	padding: 3px;
+}
+
+.scoreTable {
+	border: 3px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 18px;
+	width: 50%;
+	padding: 5px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.captcha {
+	margin-top: 8px;
+}
+
+.chessImage {
+	margin: 15px;
+	width: 500px;
+	height: 500px;
+}
+
+.headerText {
+	margin: 5px;
+}
+
+.rulesList {
+	margin: 15px;
+	font-family: 'Roboto Slab', serif;
+	font-size: 16px;
+}
+
+.rulesList>li {
+	margin-top: 15px;
+}
+
+canvas{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+	display: block;
+	margin-bottom:3px;
+	width:800px;
+	height:800px;
+}
