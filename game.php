@@ -20,45 +20,42 @@
 		<main>
 			<hr/>
 			<script>
-				var app = new PIXI.Application();
+
+				var app = new PIXI.Application(1200, 750, { transparent: true });
 				document.body.appendChild(app.view);
-				var backgroundImage = PIXI.Texture.fromImage('../img/board.png')
+				var container = new PIXI.Container();
 
-				var tilingSprite = new PIXI.extras.TilingSprite(
-					backgroundImage,
-					800,
-					600
-				);
-				app.stage.addChild(tilingSprite);
+				app.stage.addChild(container);
+
+				var xDimensionSize = 8;
+				var yDimensionSize = 8;
+				var xStartPos = 180;
+				var yStartPos = -60;
+				var initWithWhiteSquare = true;
+
+				var square = new PIXI.Graphics();
+
+				for(var x = 1; x <= xDimensionSize; x++){
+					
+					for(var y = 1; y <= yDimensionSize; y++){
+
+						if(initWithWhiteSquare){
+							square.beginFill(0xffffee);
+							initWithWhiteSquare = false;
+						}
+						else{
+							square.beginFill(0x000000);
+							initWithWhiteSquare = true;
+						}
+						square.lineStyle(2, 0xcccccc);
+						square.drawRect((x * 86) + xStartPos, (y * 86) + yStartPos, 86, 86);
+						container.addChild(square);
+					}
+					
+					initWithWhiteSquare = !initWithWhiteSquare;
 
 
-				/*
-								var app = new PIXI.Application(1200, 800, {
-									backgroundColor: 0x1099bb
-								});
-								document.body.appendChild(app.view);
-
-				*/
-
-				// create a new Sprite from an image path
-				//var bunny = PIXI.Sprite.fromImage('../img/bunny.png')
-
-				// center the sprite's anchor point
-				//bunny.anchor.set(0.5);
-
-				// move the sprite to the center of the screen
-				//bunny.x = app.screen.width / 2;
-				//bunny.y = app.screen.height / 2;
-
-				//app.stage.addChild(bunny);
-
-				// Listen for animate update
-				/*app.ticker.add(function (delta) {
-					// just for fun, let's rotate mr rabbit a little
-					// delta is 1 if running at 100% performance
-					// creates frame-independent transformation
-					bunny.rotation += 0.1 * delta;
-				});*/
+				}
 			</script>
 		</main>
 	</div>
