@@ -9,6 +9,9 @@
 	<title>Gra</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.1/pixi.min.js"></script>
 	<script src="../scripts/gameVariables.js"></script>
+	<script src="../scripts/globalVariablesScope.js"></script>
+	<script src="../scripts/helperFunctions.js"></script>
+	<script src="../scripts/engineHelperFunctions.js"></script>
 	<script src="../scripts/gameFunctions.js"></script>
 </head>
 

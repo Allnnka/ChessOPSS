@@ -9,6 +9,7 @@ function drawBoard(){
             }
             else{
                 square.beginFill(0x626466);
+                
                 initBoardWithWhiteSquare = true;
             }
             square.lineStyle(lineSquareSize, 0xcccccc);
@@ -19,68 +20,11 @@ function drawBoard(){
     }
 
     initBoardWithWhiteSquare = initBoardColorTemp;
-}
 
-function getSquareCenterPositionX(x){
-    //check if x position is on our game board
-    if(x > xBoardStartPos && x < xBoardStartPos + (xBoardDimensionSize * oneSquareSize)){
-        //calculate x-index of square
-
-        xIndex = Math.floor((Math.floor(x) - xBoardStartPos) / oneSquareSize) + 1;
-
-        console.log("xIndex:" + xIndex)
-
-        //calculate position by x-index of square
-
-        xPosition = xBoardStartPos + (xIndex * oneSquareSize) - (oneSquareSize / 2);
-
-        return xPosition;
-
+    for(var t = 0; t < xBoardDimensionSize; t++){
+        console.log(blackSquaresPosOnBoard[t]);
     }
 
-    return 0; 
-}
-
-function getSquareCenterPositionY(y){
-    if(y > yBoardStartPos && y < yBoardStartPos + (yBoardDimensionSize * oneSquareSize)){
-        yIndex = Math.floor((Math.floor(y) - yBoardStartPos) / oneSquareSize) + 1;
-
-        console.log("yIndex:" + yIndex);
-
-        yPosition = yBoardStartPos + (yIndex * oneSquareSize) - (oneSquareSize / 2);
-
-        return yPosition;
-    }
-    return 0;
-}
-
-function isSquareColorBlack(x, y){
-
-    xIndex = 0;
-    yIndex = 0;
-
-    if(x > xBoardStartPos && x < xBoardStartPos + (xBoardDimensionSize * oneSquareSize)){
-        xIndex = Math.floor((Math.floor(x) - xBoardStartPos) / oneSquareSize) + 1;
-    }
-
-    if(y > yBoardStartPos && y < yBoardStartPos + (yBoardDimensionSize * oneSquareSize)){
-        yIndex = Math.floor((Math.floor(y) - yBoardStartPos) / oneSquareSize) + 1;
-    }
-
-    if(initBoardWithWhiteSquare){
-
-        if(xIndex != 0 && isEven(xIndex) && yIndex != 0 && !isEven(yIndex))
-            return true;
-        else
-            return false;
-    }
-
-    return -1;
-    
-}
-
-function isEven(n){
-    return n % 2 == 0;
 }
 
 function drawFigure(x, y) {
@@ -114,15 +58,15 @@ function onDragEnd() {
     this.data = null;
     this.x = getSquareCenterPositionX(this.x);
     this.y = getSquareCenterPositionY(this.y);
-
-    console.log(isSquareColorBlack(this.x, this.y));
-
 }
 
 function onDragMove() {
     if (this.dragging) {
         var newPosition = this.data.getLocalPosition(this.parent);
-        this.x = newPosition.x;
-        this.y = newPosition.y;
+
+        if(isFigurePositionValid(newPosition.x, newPosition.y)){
+            this.x = newPosition.x;
+            this.y = newPosition.y;
+        }
     }
 }
