@@ -28,9 +28,7 @@
 				app.stage.addChild(container);
 				var square = new PIXI.Graphics();
 				drawBoard();
-				drawFigure(390, 150);
-
-				//drawFigures();
+				drawFigure(xBoardStartPos + (oneSquareSize / 2), yBoardStartPos + (oneSquareSize / 2));
 			</script>
 		</main>
 	</div>

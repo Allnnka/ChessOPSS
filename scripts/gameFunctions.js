@@ -1,6 +1,6 @@
 function drawBoard(){
-    for(var x = 1; x <= xBoardDimensionSize; x++){		
-        for(var y = 1; y <= yBoardDimensionSize; y++){
+    for(var x = 0; x <= xBoardDimensionSize; x++){		
+        for(var y = 0; y <= yBoardDimensionSize; y++){
 
             if(initBoardWithWhiteSquare){
                 square.beginFill(0xffffee);
@@ -15,8 +15,40 @@ function drawBoard(){
 
             container.addChild(square);
         }
-        initBoardWithWhiteSquare = !initBoardWithWhiteSquare;
     }
+}
+
+function getSquareCenterPositionX(x){
+    //check if x position is on our game board
+    if(x > xBoardStartPos && x < xBoardStartPos + (xBoardDimensionSize * oneSquareSize)){
+        //calculate x-index of square
+
+        xIndex = Math.floor((Math.floor(x) - xBoardStartPos) / oneSquareSize) + 1;
+
+        console.log("xIndex:" + xIndex)
+
+        //calculate position by x-index of square
+
+        xPosition = xBoardStartPos + (xIndex * oneSquareSize) - (oneSquareSize / 2);
+
+        return xPosition;
+
+    }
+
+    return 0; 
+}
+
+function getSquareCenterPositionY(y){
+    if(y > yBoardStartPos && y < yBoardStartPos + (yBoardDimensionSize * oneSquareSize)){
+        yIndex = Math.floor((Math.floor(y) - yBoardStartPos) / oneSquareSize) + 1;
+
+        console.log("yIndex:" + yIndex);
+
+        yPosition = yBoardStartPos + (yIndex * oneSquareSize) - (oneSquareSize / 2);
+
+        return yPosition;
+    }
+    return 0;
 }
 
 function drawFigure(x, y) {
@@ -48,6 +80,8 @@ function onDragEnd() {
     this.alpha = 1;
     this.dragging = false;
     this.data = null;
+    this.x = getSquareCenterPositionX(this.x);
+    this.y = getSquareCenterPositionY(this.y);
 }
 
 function onDragMove() {
