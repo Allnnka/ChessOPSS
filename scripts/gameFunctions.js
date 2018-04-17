@@ -1,4 +1,5 @@
 function drawBoard(){
+    initBoardColorTemp = initBoardWithWhiteSquare;
     for(var x = 0; x <= xBoardDimensionSize; x++){		
         for(var y = 0; y <= yBoardDimensionSize; y++){
 
@@ -16,6 +17,8 @@ function drawBoard(){
             container.addChild(square);
         }
     }
+
+    initBoardWithWhiteSquare = initBoardColorTemp;
 }
 
 function getSquareCenterPositionX(x){
@@ -51,6 +54,35 @@ function getSquareCenterPositionY(y){
     return 0;
 }
 
+function isSquareColorBlack(x, y){
+
+    xIndex = 0;
+    yIndex = 0;
+
+    if(x > xBoardStartPos && x < xBoardStartPos + (xBoardDimensionSize * oneSquareSize)){
+        xIndex = Math.floor((Math.floor(x) - xBoardStartPos) / oneSquareSize) + 1;
+    }
+
+    if(y > yBoardStartPos && y < yBoardStartPos + (yBoardDimensionSize * oneSquareSize)){
+        yIndex = Math.floor((Math.floor(y) - yBoardStartPos) / oneSquareSize) + 1;
+    }
+
+    if(initBoardWithWhiteSquare){
+
+        if(xIndex != 0 && isEven(xIndex) && yIndex != 0 && !isEven(yIndex))
+            return true;
+        else
+            return false;
+    }
+
+    return -1;
+    
+}
+
+function isEven(n){
+    return n % 2 == 0;
+}
+
 function drawFigure(x, y) {
 
     var texture = PIXI.Texture.fromImage('../img/figures/black_knight.png');
@@ -82,6 +114,9 @@ function onDragEnd() {
     this.data = null;
     this.x = getSquareCenterPositionX(this.x);
     this.y = getSquareCenterPositionY(this.y);
+
+    console.log(isSquareColorBlack(this.x, this.y));
+
 }
 
 function onDragMove() {
