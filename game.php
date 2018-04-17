@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="styles/style.css" />
 	<title>Gra</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.1/pixi.min.js"></script>
+	<script src="../scripts/gameVariables.js"></script>
+	<script src="../scripts/gameFunctions.js"></script>
 </head>
 
 <body>
@@ -20,42 +22,15 @@
 		<main>
 			<hr/>
 			<script>
-
-				var app = new PIXI.Application(1200, 750, { transparent: true });
+				var app = new PIXI.Application(xCanvasSize, yCanvasSize, { transparent: true });
 				document.body.appendChild(app.view);
 				var container = new PIXI.Container();
-
 				app.stage.addChild(container);
-
-				var xDimensionSize = 8;
-				var yDimensionSize = 8;
-				var xStartPos = 180;
-				var yStartPos = -60;
-				var initWithWhiteSquare = true;
-
 				var square = new PIXI.Graphics();
+				drawBoard();
+				drawFigure(390, 150);
 
-				for(var x = 1; x <= xDimensionSize; x++){
-					
-					for(var y = 1; y <= yDimensionSize; y++){
-
-						if(initWithWhiteSquare){
-							square.beginFill(0xffffee);
-							initWithWhiteSquare = false;
-						}
-						else{
-							square.beginFill(0x000000);
-							initWithWhiteSquare = true;
-						}
-						square.lineStyle(2, 0xcccccc);
-						square.drawRect((x * 86) + xStartPos, (y * 86) + yStartPos, 86, 86);
-						container.addChild(square);
-					}
-					
-					initWithWhiteSquare = !initWithWhiteSquare;
-
-
-				}
+				//drawFigures();
 			</script>
 		</main>
 	</div>
