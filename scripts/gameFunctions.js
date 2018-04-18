@@ -18,13 +18,7 @@ function drawBoard(){
             container.addChild(square);
         }
     }
-
     initBoardWithWhiteSquare = initBoardColorTemp;
-
-    for(var t = 0; t < xBoardDimensionSize; t++){
-        console.log(blackSquaresPosOnBoard[t]);
-    }
-
 }
 
 function drawFigure(x, y) {

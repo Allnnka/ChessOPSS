@@ -26,17 +26,31 @@
 			<div id="container">
 				<article>
 						<header>
-							<h1>Ranking graczy</h1>
+							<h1 class="headerText">Ranking graczy</h1>
 						</header>
 						<hr/>
+
+
+						
 						<?php
+						
 							require_once 'db/queries.php';
 							$data = getUserRankTable();
-							echo "<div class='scoreTable'><table><tr><th>ID</th><th>Email</th><th>Score</th><th>Win Games</th></tr>";
+							//echo "<div class='scoreTable'><table><tr><th>ID</th><th>Email</th><th>Score</th><th>Win Games</th></tr>";
+							echo '<table class="ranking container">
+							<thead>
+								<tr>
+									<th><h1>Position</h1></th>
+									<th><h1>User Name</h1></th>
+									<th><h1>Score</h1></th>
+									<th><h1>Win Games</h1></th>
+								</tr>';
+							echo "</thead><tbody>";
 							while($row = $data->fetch_assoc()) {
 								echo "<tr><td>".$row["id"]."</td><td>".$row["email"]."</td><td>".$row["score"]."</td><td>".$row["win_games"]."</td></tr>";
 							}
-							echo "</table></div>";
+							echo "</tbody></table>";
+							
 						?>
 				</article>
 			<div>
