@@ -27,7 +27,7 @@
 			<div id="container">
 				<article>
 					<header>
-						<h1 class="headerText"> Zasay gry w szachy na 4 osoby </h1>
+						<h1 class="headerText"> Zasady gry w szachy na 4 osoby </h1>
 					</header>
 					<hr/>
 
@@ -123,7 +123,6 @@
 
 
 					</ul>
-					<hr/>
 				</article>
 			</div>
 		</main>
