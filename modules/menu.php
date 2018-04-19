@@ -8,9 +8,21 @@
     <li>
         <a href="game.php">Rozgrywka</a>
     </li>
-    <li>
-        <a href="login.php">Logowanie</a>
-    </li>
+    <?php
+    session_start();
+    if(isset($_SESSION['logIn']))
+    {
+        echo '<li>';
+            echo'<a href="logout.php">Wyloguj się</a>';
+        echo '</li>';
+    }
+    else
+    {
+        echo '<li>';
+            echo '<a href="login.php">Logowanie</a>';
+        echo '</li>';
+    }
+    ?>
     <li>
         <a href="register.php">Rejestracja</a>
     </li>

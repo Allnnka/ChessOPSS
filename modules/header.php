@@ -1,4 +1,3 @@
-
 <h1 id="logo" >
 	<a href="index.php">
 	<img src="img/horse.png" /> SZACHY ONLINE

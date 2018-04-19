@@ -24,9 +24,9 @@
 		</header>
 		<main>
 			<div id="login">
-					<form>
+					<form method="post" action="models/loginUser.php" accept-charset='UTF-8'>
 						<input type="email" name="email" placeholder="email" minlength="5" required onfocus="this.placeholder=''" onblur="this.placeholder='login'" />	
-						<input type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'" />
+						<input type="password" name="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'" />
 						<input type="submit" value="Zaloguj się" />
 					</form>
 			</div>
