@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="styles/style.css" />
 	<title>Logowanie</title>
 	<script src="scripts/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="scripts/validator.js"></script>
 </head>
 
 <body>
@@ -23,11 +24,13 @@
 			</nav>
 		</header>
 		<main>
-			<div id="login">
-					<form method="post" action="models/loginUser.php" accept-charset='UTF-8'>
-						<input type="email" name="email" placeholder="email" minlength="5" required onfocus="this.placeholder=''" onblur="this.placeholder='login'" />	
-						<input type="password" name="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'" />
-						<input type="submit" value="Zaloguj się" />
+		<div class="register">
+					<form method="post" id="registerForm" accept-charset='UTF-8'>
+					<span class="popuptext" id="emailValidationPopup">Niepoprawny email</span>
+					<input type="text" name="emailInput" id="emailInput" placeholder="Adres email"/>
+					<span class="popuptext" id="passwordValidationPopup">Podano złe hasło </span>
+					<input type="password" name="passwordInput" id="passwordInput" placeholder="Hasło"/>
+					<input type="submit" value="Zaloguj się" />
 					</form>
 			</div>
 		</main>
