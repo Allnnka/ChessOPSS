@@ -24,6 +24,7 @@
 			</nav>
 		</header>
 		<main>
+<<<<<<< HEAD
 		<div class="register">
 					<form method="post" id="registerForm" accept-charset='UTF-8'>
 					<span class="popuptext" id="emailValidationPopup">Niepoprawny email</span>
@@ -31,6 +32,13 @@
 					<span class="popuptext" id="passwordValidationPopup">Podano złe hasło </span>
 					<input type="password" name="passwordInput" id="passwordInput" placeholder="Hasło"/>
 					<input type="submit" value="Zaloguj się" />
+=======
+			<div id="login">
+					<form>
+						<input type="email" name="email" placeholder="email" minlength="5" required onfocus="this.placeholder=''" onblur="this.placeholder='login'" />	
+						<input type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'" />
+						<input type="submit" value="Zaloguj się" />
+>>>>>>> parent of f5bb3bf... Session, log in and correct reCaptcha
 					</form>
 			</div>
 		</main>
